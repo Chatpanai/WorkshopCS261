@@ -7,24 +7,34 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="topright"></div>
+    <img src="img/Logo.png" alt="Logo" class="logo">
+    <div class="top-right">En > TH > Contact us</div>
     <div class="container">
+
         <div class="login-box">
+            <p class="bold-text">Request form</p>
             <h2>Login</h2>
-            <form id="loginForm">
+            <form id="loginForm" onsubmit="submitLogin(event)">
                 <div class="textbox">
                     <img src="img/icon1.png" alt="O" class="input-icon">
-                    <input type="text" id="username" placeholder="Username" required>
+                    <input type="text" id="username" placeholder="Username">
                 </div>
                 <div class="textbox">
                     <img src="img/icon2.png" alt="O" class="input-icon">
-                    <input type="password" id="password" placeholder="Password" required>
+                    <input type="password" id="password" placeholder="Password" >
                 </div>
                 <button type="submit">Login</button>
             </form>
-            <p id="message"></p>
         </div>
+
+        <div class="result-container" id="resultContainer">
+            <img src="img/x.png" alt="Close" class="close-icon" onclick="closeResult()">
+            <div id="message"></div>
+        </div>
+
     </div>
+
     <script src="js/script.js"></script>
+
 </body>
 </html>
